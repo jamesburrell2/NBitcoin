@@ -36,6 +36,6 @@ public class Nycoin : NetworkSetBase
 			}
 			public override Block CreateBlock()
 			{
-				return new NycoinBlock(new DogecoinBlockHeader());
+				return new NycoinBlock(new NycoinBlockHeader());
 			}
 }
