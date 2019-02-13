@@ -842,8 +842,29 @@
 					Hash = "b841f9c2098e973217a32a6213fe2a5bfe2987dd7b5c851a38082ce191b65283"
 				}
 			};
+			
 		}
 
+		public class NycoinNodeDownloadData
+		{
+			public NodeDownloadData v1_3_1_2 = new NodeDownloadData()
+			{
+				Version = "1.3.1.20",
+				Windows = new NodeOSDownloadData()
+				{
+					DownloadLink = "https://github.com/NewYorkCoin-NYC/nycoin/releases/download/v1.3.1.20/newyorkcoin-1.3.1.20-win64.zip",
+					Archive = "newyorkcoin-1.3.1.20-win64.zip",
+					Executable = "newyorkcoin-1.3.1/bin/newyorkcoind.exe",
+					Hash = "58b54f4045af123be0d6c2e99b81a601"
+				},
+				Linux = new NodeOSDownloadData()
+				{
+					DownloadLink = "https://github.com/NewYorkCoin-NYC/nycoin/archive/v1.3.1.20.zip",
+					Archive = "nycoin-1.3.1.20.tar.gz",
+					Executable = "nycoin-1.3.1.20/bin/newyorkcoind",
+					Hash = "5ab277358f55dc11ab97090a65640c13"
+				}
+};
 		public static GoByteNodeDownloadData GoByte
 		{
 			get; set;
@@ -962,7 +983,12 @@
 		{
 			get; set;
 		} = new ChaincoinNodeDownloadData();
-
+		
+		public static NycoinNodeDownloadData Nycoin
+		{
+			get; set;
+		} = new NycoinNodeDownloadData();
+			
 		public bool UseSectionInConfigFile { get; private set; }
 		public string AdditionalRegtestConfig { get; private set; }
 	}
