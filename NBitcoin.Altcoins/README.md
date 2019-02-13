@@ -20,7 +20,7 @@ Currently supported altcoins are:
 * Koto
 * Bitcoinplus
 * Chaincoin
-*NewYorkCoin
+* NewYorkCoin
 
 ## How to use?
 
