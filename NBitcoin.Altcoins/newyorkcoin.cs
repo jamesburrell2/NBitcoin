@@ -295,18 +295,19 @@ public class Nycoin : NetworkSetBase
 			.SetBase58Bytes(Base58Type.SECRET_KEY, new byte[] { 241 })
 			.SetBase58Bytes(Base58Type.EXT_PUBLIC_KEY, new byte[] { 0x04, 0x35, 0x87, 0xCF })
 			.SetBase58Bytes(Base58Type.EXT_SECRET_KEY, new byte[] { 0x04, 0x35, 0x83, 0x94 })
-			.SetBech32(Bech32Type.WITNESS_PUBKEY_ADDRESS, Encoders.Bech32("tdoge"))
-			.SetBech32(Bech32Type.WITNESS_SCRIPT_ADDRESS, Encoders.Bech32("tdoge"))
+			.SetBech32(Bech32Type.WITNESS_PUBKEY_ADDRESS, Encoders.Bech32("tnyc"))
+			.SetBech32(Bech32Type.WITNESS_SCRIPT_ADDRESS, Encoders.Bech32("tnyc"))
 			.SetMagic(0xdcb7c1fc)
 			.SetPort(44556)
 			.SetRPCPort(22555)
-		   .SetName("doge-test")
-		   .AddAlias("doge-testnet")
-		   .AddAlias("dogecoin-test")
-		   .AddAlias("dogecoin-testnet")
+		   .SetName("nyc-test")
+		   .AddAlias("nyc-testnet")
+		   .AddAlias("nycoin-test")
+		   .AddAlias("nycoin-testnet")
 		   .AddDNSSeeds(new[]
 		   {
-				new DNSSeedData("jrn.me.uk", "testseed.jrn.me.uk")
+				new DNSSeedData("nycoin.money", "dnsseed.nycoin.money"),
+				new DNSSeedData("nycoin.community", "dnsseed.nycoin.community"),
 		   })
 		   .AddSeeds(new NetworkAddress[0])
 		   .SetGenesis("010000000000000000000000000000000000000000000000000000000000000000000000696ad20e2dd4365c7459b4a4a5af743d5e92c6da3229e6532cd605f6533f2a5bb9a7f052f0ff0f1ef7390f000101000000010000000000000000000000000000000000000000000000000000000000000000ffffffff1004ffff001d0104084e696e746f6e646fffffffff010058850c020000004341040184710fa689ad5023690c80f3a49c8f13f8d45b8c857fbcbc8bc4a8e4d3eb4b10f4d4604fa08dce601aaf0f470216fe1b51850b4acf21b179c45070ac7b03a9ac00000000");
